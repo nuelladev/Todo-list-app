@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Todo app</title>
 
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   
 </head>
 <body>
@@ -28,6 +26,51 @@
       <img src="Assets/images/icon-sun.svg" alt="light-theme">
     </div>
   </div>
+  <div class="new-todo">
+  <div class="check">
+ <div class="check-mark">
+ </div>
+  </div>
+<div class="new-todo-input">
+  <form onsubmit="addItem(event)">
+ <input id="todo-input" type="text" placeholder="Create a new todo..." />
+  </form>
 </div>
+  </div>
+  <div class="todo-items-wrapper">
+    <div class="todo-items">
+      <div class="todo-item">
+        <div class="check">
+          <div class="check-mark checked">
+          <img src="Assets/images/icon-check.svg" alt="">
+          </div>
+        </div>
+        <div class="todo-text-checked">
+          Learn Javascript
+        </div>
+      </div>
+      <div class="todo-item">
+        <div class="check">
+          <div class="check-mark">
+            <div class="todo-text">
+              Build a Springboot Project
+            </div>
+          </div>
+        </div>
+        <div class="todo-items-info">
+          <div class="items-left">
+            5 items left
+                </div>
+                <div class="items-statuses">
+                    <span class="active">All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div>
+                <div class="items-clear">
+                    <span>Clear Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
