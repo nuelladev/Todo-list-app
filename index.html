@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Todo app</title>
-
-  
 </head>
 <body>
 <div class="background-image">
@@ -19,58 +17,66 @@
 </div>
 <div class="container">
   <div class="header">
-    <div class="Title">
-       TODO
+    <div class="title">
+      TODO
     </div>
     <div class="theme">
       <img src="Assets/images/icon-sun.svg" alt="light-theme">
     </div>
   </div>
   <div class="new-todo">
-  <div class="check">
- <div class="check-mark">
- </div>
-  </div>
-<div class="new-todo-input">
-  <form onsubmit="addItem(event)">
- <input id="todo-input" type="text" placeholder="Create a new todo..." />
-  </form>
-</div>
+    <div class="check">
+      <div class="check-mark">
+        <img src="Assets/images/icon-check.svg" alt="">
+      </div>
+    </div>
+    <div class="new-todo-input">
+      <form onsubmit="addItem(event)">
+        <input id="todo-input" type="text" placeholder="Create a new todo..." />
+        <button>Add</button>
+      </form>
+    </div>
   </div>
   <div class="todo-items-wrapper">
     <div class="todo-items">
       <div class="todo-item">
         <div class="check">
           <div class="check-mark checked">
-          <img src="Assets/images/icon-check.svg" alt="">
+            <img src="Assets/images/icon-check.svg" alt="">
           </div>
         </div>
         <div class="todo-text-checked">
+          <br>
           Learn Javascript
+          <i class="fas fa-trash delete-icon" onclick="deleteItem(this)"></i>
         </div>
       </div>
       <div class="todo-item">
         <div class="check">
           <div class="check-mark">
-            <div class="todo-text">
-              Build a Springboot Project
-            </div>
+            <img src="Assets/images/icon-check.svg" alt="">
           </div>
         </div>
-        <div class="todo-items-info">
-          <div class="items-left">
-            5 items left
-                </div>
-                <div class="items-statuses">
-                    <span class="active">All</span>
-                    <span>Active</span>
-                    <span>Completed</span>
-                </div>
-                <div class="items-clear">
-                    <span>Clear Completed</span>
-                </div>
-            </div>
+        <div class="todo-text">
+          Build a Springboot Project
+          <i class="fas fa-trash delete-icon" onclick="deleteItem(this)"></i>
         </div>
+      </div>
     </div>
+    <div class="todo-items-info">
+      <div class="items-left">
+        5 items left
+      </div>
+      <div class="items-statuses">
+        <span class="active">All</span>
+        <span>Active</span>
+        <span>Completed</span>
+      </div>
+      <div class="items-clear">
+        <span>Clear Completed</span>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
