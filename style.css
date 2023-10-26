@@ -68,7 +68,7 @@ body {
     border: none;
     color: white;
     cursor: pointer;
-    padding: 10px 20px; /* Add padding to the button (10px top/bottom, 20px left/right) */
+    padding: 10px 20px; 
     margin-right: 10px; /* Add some margin to create space */
     height: 100%; /* Set the button's height to match the input field */
     border-radius: 5px; /* Add some border radius for curvier corners */
@@ -102,6 +102,10 @@ body {
 
 .check-mark.checked {
     background: linear-gradient(135deg, #55DDFF, #C058F3);
+}
+.todo-text-checked p{
+    margin-top: 10px;
+    color: hsl(233, 14%, 35%);
 }
 
 .todo-text.checked {
@@ -153,7 +157,7 @@ body {
 .delete-icon {
     cursor: pointer;
     margin-left: auto; 
-    color:  black;
+    color:  hsl(233, 14%, 35%);
     transition: color 0.3s;
 }
  
@@ -223,4 +227,34 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 7px 7px hsl(235, 21%, 11%);
     border-color: hsl(235, 24%, 19%);
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(233, 14%, 35%);
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%; 
+    }
+
+    .header .title {
+        font-size: 30px; 
+    }
+
+    .header {
+        flex-direction: column; 
+    }
+
+    .items-left, .items-clear {
+        display: flex;
+        order: 1;
+    }
+
+    .items-statuses {
+        order: 3; 
+        margin-top: 10px; 
+    }
 }
