@@ -1,0 +1,36 @@
+:root {
+
+    --hyperlink-blue:  hsl(220, 98%, 61%);
+    --bg-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    
+    /* Light theme */
+    --bg-color: hsl(0, 0%, 98%);
+    --body-text: hsl(235, 19%, 35%);
+    --div-bg: hsl(0, 0%, 100%);
+    --shadow: rgba(211, 211, 211, 0.219);
+    --div-border: hsl(233, 11%, 84%);
+    
+    /* Light Additional Colors */
+    --dark-blue-gray: hsl(236, 9%, 61%);
+    --icon-gray: hsl(236, 33%, 92%);
+    --blue-gray: hsl(233, 11%, 84%);
+
+    /* Dark Additional Colors */
+    --hover: hsl(234, 44%, 81%);
+    --dark-gray-blue: hsl(234, 11%, 52%);
+    --very-dark-gray-blue: hsl(233, 14%, 35%);
+    --near-black-blue: hsl(237, 14%, 26%);
+
+    --bg-mobile:  url("/Assets/images/bg-mobile-light.jpg");
+    --bg-desktop: url("/Assets/images/bg-desktop-light.jpg");
+}
+
+[data-theme="dark"] {
+    --div-bg: hsl(235, 24%, 19%);
+    --bg-color: hsl(235, 21%, 11%);
+    --body-text: hsl(234, 39%, 85%);
+    --shadow: rgba(12, 11, 11, 0.083);
+    --div-border: hsl(237, 14%, 26%);
+    --bg-mobile:  url("/Assets/images/bg-mobile-dark.jpg");
+    --bg-desktop: url("/Assets/images/bg-desktop-dark.jpg");
+}

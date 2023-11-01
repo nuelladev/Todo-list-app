@@ -1,260 +1,256 @@
-* {
-    padding: 0;
+@import url("utilities/styling.css");
+
+*,
+*:before,
+*:after {
+    padding:0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
+html {
     font-family: 'Josefin Sans', sans-serif;
-    background-color: hsl(235, 21%, 11%);
-    font-size: 18px;
+    color: var(--body-text-blue);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--body-text);
+    margin: 0 auto;
+}
+
+header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    place-items: center;
 }
 
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-height: 350px;
-    z-index: -1;
-}
-
-.background-image img {
-    width: 100%;
-    object-fit: cover;
-    min-height: 350px;
-    object-position: left;
+h1 {
+    font-size: 41px;
+    letter-spacing: 9px;
+    color: white;
+    font-weight: 600;
 }
 
 .container {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 30px;
-    margin-top: 100px;
+    padding: 50px 25px;
+    margin: 0 auto;
 }
 
-.header {
+.hero-img {
+    position:fixed;
+    z-index: -100;
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.break-word {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* FORM */
+
+.todo-container {
+    background-color: var(--div-bg);
+    padding: 20px 32px;
+    margin: 50px auto;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+#newTask input{
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    outline: none;
+    background-color: var(--div-bg);
+    margin-left: 15px;
+    padding-top: 5px;
+    color: var(--body-text)
+}
+
+#newTask input:focus {
+    outline: none;
+}
+
+.checkBtn {
+    
+    float:left;
+    position: relative;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--icon-gray);
+    background: none;   
+    cursor: pointer;
+}
+
+#checkIcon {
+    display: none;
+     margin: auto;
+     object-fit: contain;
+}
+
+#clr-completed {
+    cursor:pointer;
+}
+
+
+
+.checked {
+    background: linear-gradient(90deg,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+
+
+#listWrapper {
+    background-color: var(--div-bg);
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 5px 7px 10px var(--shadow);
+}
+
+.task {
+  padding: 20px 25px;
+  display:flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--div-border);
+  height: 80px;
+  place-items: center;
+  cursor: move;
+  background-color: var(--div-bg);
+  border-radius: 5px 5px 0 0;
+}
+
+.remove {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+
+}
+
+.toDoText {
+    margin-left: 10px;
+    line-height: 1.5rem;
+    width: 80%;
+}
+
+#noTasksLeft {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 15px;
+    line-height: 2rem;
+}
+
+
+
+.items-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    color:var(--body-text);
+    padding: 25px 20px;
+    background-color: var(--div-bg);
+    border-radius: 0 0 10px 10px
 }
 
-.title {
-    color: white;
-    letter-spacing: 10px;
-    font-size: 50px;
+
+.show-category {
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    background-color:var(--div-bg);
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 5px 7px 10px var(--shadow);
+    border-radius: 10px;
+}
+
+.category {
+    cursor: pointer;
+
+}
+
+.active {
+    color: var(--hyperlink-blue);
     font-weight: bold;
 }
 
-.new-todo {
-    width: 100%;
-    height: 70px;
-    background-color: hsl(235, 24%, 19%);
-    margin-top: 50px;
-    border-radius: 6px;
-    display: flex;
-}
 
-.check {
-    flex-basis: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.new-todo-input button {
-    background: linear-gradient(135deg, #55DDFF, #C058F3);
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 10px 20px; 
-    margin-right: 10px; /* Add some margin to create space */
-    height: 100%; /* Set the button's height to match the input field */
-    border-radius: 5px; /* Add some border radius for curvier corners */
-    
+.reorder {
+    text-align: center;
+    margin: 25px auto;
 }
 
 
-.check-mark {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid hsl(237, 14%, 26%);
-    transition: all 0.25s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.check-mark img {
-    visibility: hidden;
-}
-
-.check-mark.checked img,
-.check-mark:hover img {
-    visibility: visible;
-}
-
-.check-mark:hover {
-    border-color: #55DDFF;
-}
-
-.check-mark.checked {
-    background: linear-gradient(135deg, #55DDFF, #C058F3);
-}
-.todo-text-checked p{
-    margin-top: 10px;
-    color: hsl(233, 14%, 35%);
-}
-
-.todo-text.checked {
+.completed {
     text-decoration: line-through;
-    color: hsl(233, 14%, 35%);
 }
 
-.new-todo-input {
-    flex-grow: 1;
+
+
+
+.toDoItem:hover {
+    background: var(--hover)
+}
+
+/* Attribution */
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%); 
+}
+
+
+/* TOGGLE MODE */
+
+.theme-switch-wrapper {
     display: flex;
-    align-items: center;
+    align-items:center
 }
 
-.new-todo-input input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 18px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: hsl(234, 39%, 85%);
+/* DRAG AND DROP HINT */
+[draggable="true"] {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+.task.movable {
+    list-style: none;
+    margin: 0;
+}
+.task:hover {
+    background-color: rgb(248, 244, 244);
+
 }
 
-.new-todo-input form {
-    flex-grow: 1;
-    display: flex;
+@media screen and (max-width: 375px) {
+    .hero-img {
+        background-image: var(--bg-mobile);
+        max-width: 100%;
+    }
 }
+@media screen and (min-width: 376px)  {
+    body {
+        margin: 0 auto;
+    }
 
-.new-todo-input input::placeholder {
-    color: hsl(233, 14%, 35%);
-}
-
-.todo-text {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: hsl(234, 39%, 85%);
-    justify-content: space-between;
-    margin-right: 30px;
-    flex-grow: 1; 
-}
-.todo-text-checked {
-    display: flex;
-    margin-right: 30px;
-    margin-top: 10px;
-    flex-grow: 1; 
-}
-
-.delete-icon {
-    cursor: pointer;
-    margin-left: auto; 
-    color:  hsl(233, 14%, 35%);
-    transition: color 0.3s;
-}
- 
-
-
-.delete-icon:hover {
-    color: red; /* Change the color to red when hovered */
-}
-
-.todo-item {
-    width: 100%;
-    height: 70px;
-    background-color: hsl(235, 24%, 19%);
-    display: flex;
-    border-bottom: 1px solid hsl(237, 14%, 26%);
-    cursor: pointer;
-    transition: all 0.25s ease;
-    transition-property: box-shadow, transform, border-color;
-}
-
-.todo-items-wrapper {
-    margin-top: 30px;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: hsl(235, 24%, 19%);
-    box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.4);
-    margin-bottom: 30px;
-}
-
-.todo-items-info {
-    width: 100%;
-    height: 70px;
-    background-color: hsl(235, 24%, 19%);
-    display: flex;
-    align-items: center;
-    color: hsl(233, 14%, 35%);
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.items-statuses {
-    display: flex;
-    justify-content: center;
-}
-
-.items-statuses span {
-    padding: 0 4px;
-    cursor: pointer;
-}
-
-.items-clear {
-    cursor: pointer;
-    text-align: right;
-}
-
-.items-statuses span:hover,
-.items-clear:hover {
-    color: hsl(220, 98%, 61%);
-}
-
-.items-statuses .active {
-    color: hsl(220, 98%, 61%);
-}
-
-.todo-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 7px hsl(235, 21%, 11%);
-    border-color: hsl(235, 24%, 19%);
-}
-.footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: hsl(233, 14%, 35%);
-}
-
-@media (max-width: 600px) {
     .container {
-        max-width: 90%; 
+        max-width: 600px;
+        margin: 0 auto;
     }
 
-    .header .title {
-        font-size: 30px; 
+    .hero-img {
+        background-image: var(--bg-desktop);
+        height: 300px;
+        background-size: 100% 100%;
     }
-
-    .header {
-        flex-direction: column; 
-    }
-
-    .items-left, .items-clear {
-        display: flex;
-        order: 1;
-    }
-
-    .items-statuses {
-        order: 3; 
-        margin-top: 10px; 
-    }
+    
 }
