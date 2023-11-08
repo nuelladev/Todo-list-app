@@ -32,11 +32,11 @@ While working on this project, I learned and improved upon several key skills an
 
 ## Project Deployment
 
-I've deployed this project using [GitHub Pages](https://pages.github.com/), and you can access it [here](#insert-your-project-url).
+I've deployed this project using [GitHub Pages](https://pages.github.com/), and you can access it [here](https://nuelladev.github.io/Todo-list-app/l).
 
 ## Share Your Feedback
 
-I would greatly appreciate your feedback on this project. If you have any suggestions for improvements or if you'd like to discuss the project, please feel free to [reach out](#insert-your-contact-info).
+I would greatly appreciate your feedback on this project. If you have any suggestions for improvements or if you'd like to discuss the project, please feel free to [reach out](mailto:emmanuellaokafor42@yahoo.com).
 
 ## Acknowledgments
 
