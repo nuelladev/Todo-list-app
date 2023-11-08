@@ -32,7 +32,7 @@ While working on this project, I learned and improved upon several key skills an
 
 ## Project Deployment
 
-I've deployed this project using [GitHub Pages](https://pages.github.com/), and you can access it [here](https://nuelladev.github.io/Todo-list-app/l).
+I've deployed this project using [GitHub Pages](https://pages.github.com/), and you can access it [here](https://nuelladev.github.io/Todo-list-app/).
 
 ## Share Your Feedback
 

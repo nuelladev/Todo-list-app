@@ -1,6 +1,5 @@
 :root {
-
-    --hyperlink-blue:  hsl(220, 98%, 61%);
+    --hyperlink-blue: hsl(220, 98%, 61%);
     --bg-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
     
     /* Light theme */
@@ -21,16 +20,20 @@
     --very-dark-gray-blue: hsl(233, 14%, 35%);
     --near-black-blue: hsl(237, 14%, 26%);
 
-    --bg-mobile:  url("/Assets/images/bg-mobile-light.jpg");
-    --bg-desktop: url("/Assets/images/bg-desktop-light.jpg");
+    /* Corrected image paths for GitHub Pages deployment */
+    --bg-mobile: url("./Assets/images/bg-mobile-light.jpg");
+    --bg-desktop: url("./Assets/images/bg-desktop-light.jpg");
+    
 }
 
-[data-theme="dark"] {
+    [data-theme="dark"] {
     --div-bg: hsl(235, 24%, 19%);
     --bg-color: hsl(235, 21%, 11%);
     --body-text: hsl(234, 39%, 85%);
     --shadow: rgba(12, 11, 11, 0.083);
     --div-border: hsl(237, 14%, 26%);
-    --bg-mobile:  url("/Assets/images/bg-mobile-dark.jpg");
-    --bg-desktop: url("/Assets/images/bg-desktop-dark.jpg");
+    
+    
+    --bg-mobile: url("./Assets/images/bg-mobile-dark.jpg");
+    --bg-desktop: url("./Assets/images/bg-desktop-dark.jpg");
 }
